@@ -1,0 +1,26 @@
+{
+    "name": "audol/lauriane-audo-blog",
+    "description": "Projet 5 - OpenClassrooms : Réalisez un blog professionnel de A à Z",
+    
+    "authors": [
+        {
+            "name": "Lolotting",
+            "email": "audo.lauriane@gmail.com"
+        }
+    ],
+
+    "autoload": {
+    	"psr-4": {
+    		"Controllers\\":"controllers/",
+    		"Entities\\":"models/entities",
+    		"Managers\\":"models/managers",
+    		"Models\\":"models/",
+    		"App\\":"app/",
+            "Middlewares\\":"middlewares/"
+    	}
+    },
+
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "twig/twig": "^3.3"
+}
