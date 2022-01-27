@@ -1,0 +1,8 @@
+<form method="post" action="{{ route('store_category') }}">
+
+	<label for="name">Nom de la catégorie :</label>
+	<input type="text" name="name">
+	{{ flash('category') }}
+
+	<input type="submit" value="Valider">
+</form>

@@ -1,0 +1,8 @@
+<form method="post" action="{{ route('update_category', {'categoryId':category.getId()}) }}">
+
+	<label for="name">Nom de la catégorie :</label>
+	<input id="name" type="text" name="name" value="{{category.getName()}}">
+	{{ flash('name') }}
+
+	<input type="submit" value="Valider">
+</form>

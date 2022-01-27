@@ -1,0 +1,24 @@
+<form method="post" action="{{ route('store_article') }}">
+		
+	<label for="category">Catégorie</label>
+	<select id="category" name="category">
+		{% for category in categories %}
+		<option value="{{category.getId()}}"> {{category.getName()}} </option>
+		{% endfor %}
+	</select>
+	{{ flash('category') }}
+	
+	<label for="title">Titre</label>
+	<input type="text" name="title">
+	{{ flash('title') }}
+
+	<label for="chapo">Chapô</label>
+	<input type="text" name="chapo">
+	{{ flash('chapo') }}
+	
+	<label for="content">Contenu</label>
+	<input type="text" name="content">
+	{{ flash('content') }}
+
+	<input type="submit" value="Publier">
+</form>

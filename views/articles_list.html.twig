@@ -1,0 +1,11 @@
+{% for article in articles %}
+	<div id="article_link">
+		<h2>{{article.getTitle()}}</h2>
+		<ul>
+			<li>{{article.getAuthor()}}</li>
+			<li>{% if article.getEdition() == NULL %} {{article.getCreation()}} {% else %} {{article.getEdition()}} {% endif %}</li>
+			<li>{{article.getCategory()}}</li>
+		</ul>
+		<p id="chapo">{{article.getChapo()}}</p>
+	</div>
+{% endfor %}
