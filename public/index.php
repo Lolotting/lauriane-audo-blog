@@ -25,6 +25,27 @@ dump($action);
 dump($_SESSION);
 
 switch($action) {
+	case 'register':
+		$controller = new AuthController();
+		$controller->showRegisterForm();
+	break;
+	case 'signup':
+		$controller = new AuthController();
+		$controller->register();
+	break;
+	case 'login':
+		$controller = new AuthController();
+		$controller->showLoginForm();
+	break;
+	case 'signin':
+		$controller = new AuthController();
+		$controller->login();
+	break;
+	case 'signout':
+		$controller = new AuthController();
+		$controller->logout();
+	break;
+
 	case 'create_article':
 		$controller = new ArticleController();
 		$controller->createArticle();
