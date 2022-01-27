@@ -10,10 +10,10 @@ class CommentController extends Controller
 {
 	private $commentManager;
 
-	public function __construct()
+	public function __construct(commentManager)
 	{
 		parent::__construct();
-		$this->CommentManager = new CommentManager();
+		$this->commentManager = commentManager // new CommentManager();
 	}
 
 	public function createComment($id)
