@@ -1,0 +1,12 @@
+<h1>{{article.getTitle()}}</h1>
+<div id="en_tete">
+    <p>Auteur : {{article.getAuthor()}}</p>
+    <p>Dernière modification : {% if article.getEdition() == 'NULL' %} {{article.getCreation()}} {% else %} {{article.getEdition()}} {% endif %}</p>
+    <p>Catégorie : {{article.getCategory()}}</p>
+</div>
+<p id="chapo">{{article.getChapo()}}</p>
+<div>
+    {{article.getContent()}}
+</div>
+
+<a href="{{ route('create_comment', {postId:article.getId()}) }}">Lien vers ajout commentaire</a>

@@ -1,0 +1,23 @@
+<form method="post" action="{{ route('update_article', {'articleId':article.getId()}) }}">
+	<label for="category">Catégorie</label>
+	<select id="category" name="category" value="{{article.getCategory()}}">
+		{% for category in categories %}
+		<option value="{{category.getId()}}" {% if category.getId() == article.getCategory() %} selected {% endif %} > {{category.getName()}} </option>
+		{% endfor %}
+	</select>
+	{{ flash('category') }}
+	
+	<label for="title">Titre</label>
+	<input id="title" type="text" name="title" value="{{article.getTitle()}}">
+	{{ flash('title') }}
+	
+	<label for="content">Contenu</label>
+	<input id="content" type="text" name="content" value="{{article.getContent()}}">
+	{{ flash('content') }}
+
+	<label for="chapo">Chapô</label>
+	<input id="chapo" type="text" name="chapo" value="{{article.getChapo()}}">
+	{{ flash('chapo') }}
+
+	<input type="submit" value="Publier">
+</form>
