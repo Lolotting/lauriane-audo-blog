@@ -1,0 +1,15 @@
+<form method="post" action="{{ route('signup', {'postId':1}) }}">
+	<label for="last_name">Nom</label><input type="text" name="last_name">
+	{{ flash('last_name') }}
+	
+	<label for="first_name">Prénom</label><input type="text" name="first_name">
+	{{ flash('first_name') }}
+	
+	<label for="email">Email</label><input id="email" type="email" name="mail">
+	{{ flash('mail') }}
+	
+	<label for="password">Mot de Passe</label><input id="password" type="password" name="password">
+	{{ flash('password') }}
+
+	<input type="submit" value="S'inscrire">
+</form>

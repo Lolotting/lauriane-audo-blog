@@ -1,0 +1,9 @@
+<form method="post" action="{{ route('signin') }}">
+	<label for="email">Email</label><input id="email" type="email" name="mail">
+	{{ flash('mail') }}
+	
+	<label for="password">Mot de Passe</label><input id="password" type="password" name="password">
+	{{ flash('password') }}
+
+	<input type="submit" value="Se connecter">
+</form>
