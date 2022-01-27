@@ -10,10 +10,10 @@ class CategoryController extends Controller
 {
 	private $categoryManager;
 
-	public function __construct()
+	public function __construct(categoryManager)
 	{
 		parent::__construct();
-		$this->categoryManager = new CategoryManager();
+		$this->categoryManager = categoryManager // new CategoryManager();
 	}
 
 	public function createCategory()

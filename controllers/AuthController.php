@@ -8,10 +8,10 @@ use App\Session;
 
 class AuthController extends Controller
 {
-	public function __construct()
+	public function __construct(userManager)
 	{
 		parent::__construct();
-		$this->userManager = new UserManager();
+		$this->userManager = userManager //new UserManager();
 	}
 
 	public function register()
