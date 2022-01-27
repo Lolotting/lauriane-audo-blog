@@ -1,0 +1,6 @@
+<h3>{{comment.getTitle()}}</h3>
+<div id="en_tete">
+    <p>Auteur : {{comment.getAuthor()}}</p>
+    <p>Dernière modification : {% if comment.getEdition() == 'NULL' %} {{comment.getCreation()}} {% else %} {{comment.getEdition()}} {% endif %}</p>
+</div>
+<p>{{comment.getContent()}}</p>

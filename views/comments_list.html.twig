@@ -1,0 +1,10 @@
+{% for comment in comments %}
+	<div id="comment_link">
+		<h2>{{comment.getTitle()}}</h2>
+		<ul>
+			<li>{{comment.getAuthor()}}</li>
+			<li>{% if comment.getEdition() == NULL %} {{comment.getCreation()}} {% else %} {{comment.getEdition()}} {% endif %}</li>
+		</ul>
+		<p>{{comment.getContent()}}</p>
+	</div>
+{% endfor %}

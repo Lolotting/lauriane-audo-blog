@@ -1,0 +1,11 @@
+<form method="post" action="{{ route('update_comment', {'postId':comment.getId()}) }}">
+	<label for="title">Titre</label>
+	<input id="title" type="text" name="title" value="{{comment.getTitle()}}">
+	{{ flash('title') }}
+	
+	<label for="content">Contenu</label>
+	<input id="content" type="text" name="content" value="{{comment.getContent()}}">
+	{{ flash('content') }}
+
+	<input type="submit" value="Publier">
+</form>
