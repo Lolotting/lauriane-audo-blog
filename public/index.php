@@ -87,6 +87,41 @@ switch($action) {
 		$controller->listCategories($id);
 	break;
 
+	case 'create_comment':
+		$id=$_GET['postId'];
+		$controller = new CommentController();
+		$controller->createComment($id);
+	break;
+	case 'store_comment':
+		$controller = new CommentController();
+		$controller->storeComment();
+	break;
+	case 'edit_comment':
+		$id=$_GET['postId'];
+		$controller = new CommentController();
+		$controller->editComment($id);
+	break;
+	case 'update_comment':
+		$id=$_GET['commentId'];
+		$controller = new CommentController();
+		$controller->updateComment($id);
+	break;
+	case 'delete_comment':
+		$id=$_GET['postId'];
+		$controller = new CommentController();
+		$controller->deleteComment($id);
+	break;
+	case 'show_comment':
+		$id=$_GET['postId'];
+		$controller = new CommentController();
+		$controller->showComment($id);
+	break;
+	case 'list_comments':
+		$id=$_GET['postId'];
+		$controller = new CommentController();
+		$controller->listComments($id);
+	break;
+
 }
 
 /* FIN DU ROUTEUR */

@@ -1,0 +1,14 @@
+<form method="post" action="{{ route('store_comment') }}">
+		
+	<label for="title">Titre</label>
+	<input type="text" name="title">
+	{{ flash('title') }}
+	
+	<label for="content">Contenu</label>
+	<input type="text" name="content">
+	{{ flash('content') }}
+
+	<input type="hidden" name="article" value="{{id}}">
+
+	<input type="submit" value="Publier">
+</form>
